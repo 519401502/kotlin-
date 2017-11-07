@@ -41,20 +41,34 @@ fun main(args: Array<String>) {
 
 }
 
-fun text(): Unit {
-    val (name, age) = TTT("", 1)
-    var g = G<String>()
-}
-
-
-
 
 data class TTT(var s: String, var i: Int) {
 
 
 }
 
-class G(){
+class G() {
+
+
+    inner class GG {
+
+    }
+
+
+    infix fun text(s: String): Unit {
+        val (name, age) = TTT("", 1)
+        var g = G().GG()
+
+    }
+
+    enum class  Enums{
+        Android(1), IOS(2);
+
+
+        constructor(tag : Int){
+
+        }
+    }
 
     var isOk: Boolean = true
         get() = true
@@ -62,10 +76,22 @@ class G(){
             field = value
         }
 
+    companion object Faction{
+        fun text(): Unit {
+
+        }
+    }
+
+    inline fun <reified T : Enum<T>> printAllValues() {
+    }
+
 }
 
 fun text(action: (v: String) -> String) {
     var s: String = action.invoke("666")
-
+    var r = G()
+    r text ""
     println(s)
+    var f: G.Faction = G.Faction
+    f.text()
 }
