@@ -37,7 +37,7 @@ class AnnotationUtil {
 }
 
 fun main(args: Array<String>) {
-    var text = arrayListOf(1, 2, 3, 4, 5)
+    println(G().lay)
 
 }
 
@@ -61,13 +61,27 @@ class G() {
 
     }
 
+    infix fun index(str: String): Unit {
+
+    }
+
     enum class  Enums{
         Android(1), IOS(2);
 
+        var i = 1
+
+        fun getIndex(): Unit {
+            G() index "text"
+        }
 
         constructor(tag : Int){
-
+            i++
         }
+    }
+
+    val lay: String by lazy {
+        println("")
+        "dfas"
     }
 
     var isOk: Boolean = true
