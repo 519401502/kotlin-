@@ -13,5 +13,6 @@
     <orderEntry type="library" name="log4j-1.2.17" level="project" />
     <orderEntry type="library" name="jedis-2.9.0" level="project" />
     <orderEntry type="library" name="jedis-2.1.0-sources" level="project" />
+    <orderEntry type="library" name="websocket" level="project" />
   </component>
 </module>
