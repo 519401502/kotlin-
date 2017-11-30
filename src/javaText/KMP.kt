@@ -5,10 +5,8 @@ import java.util.*
 /**
  * Created by 18624915319 on 2017/11/18.
  */
-class KMP {
-}
 
-fun main(args: Array<String>) {
+fun maidn(args: Array<String>): Unit {
     var matching = false
 
     System.out.println("请输入主字符串")
@@ -27,10 +25,13 @@ fun main(args: Array<String>) {
         sonStrChars[c] = sonStr.get(c)
     }
 
+    var t:Int = 2 and 2
 
+    var plugNumber = 0
     //算法开始
     for(i: Int in 0..mainStrNumber - 1 - sonStrNumber){
-        var mainC = mainChars[i]
+        var mainC = mainChars[i + plugNumber]
+        plugNumber = 0
         for(j in 0..sonStrNumber - 1){
             var sonC = sonStrChars[j]
             if(sonC == mainC){
@@ -39,8 +40,10 @@ fun main(args: Array<String>) {
                     break
                 }
                 mainC = mainChars[i.plus(1)]
+                if(mainC == sonStrChars[0] && plugNumber == 0){
+                    ++plugNumber
+                }
             } else {
-                mainC = mainChars[i]
                 break
             }
         }

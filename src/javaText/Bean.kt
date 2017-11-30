@@ -33,18 +33,26 @@ class Bean2
 data class Xxx(var name: String = "", var age: Int = 0)
 
 fun Bean.tt(action: () -> Unit){
-    val xx: Xxx = Xxx("徐会闯", 22)
+    val xx: Xxx = Xxx("xx", 22)
     xx.age = 21
     println(xx.toString())
     action.invoke()
 }
 
-fun main(args: Array<String>) {
-    var d = Bean().apply {
-        tt {
-            println("你好")
-        }
-        text("")
-    }
+fun mainn(args: Array<String>) {
+    var j = System.currentTimeMillis()
+    var d = 1 shl 4
+    var z = System.currentTimeMillis()
+    println("${d}时间 = ${z-j}")
+
+    var q: Long = System.currentTimeMillis()
+    println(q)
+
+    var w = 0
+    for(o in 0..1000000000)
+         w= 2*2*2*2
+    var e: Long= System.currentTimeMillis()
+    println(e)
+    println("${w}时间 = ${e-q}")
 }
 

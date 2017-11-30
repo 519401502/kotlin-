@@ -22,39 +22,28 @@ public class Text {
     @IAnnotation
     public String string = "12345";
 
-    public static void main(String...args){
-//        System.out.println("sfs");
-//        Jedis jedis = new Jedis("115.159.78.127", 6379);
-//        jedis.auth("123456");
-//        System.out.println("Connection to server sucessfully");
-//        String s = jedis.set("xvhuichuang","sddfs");
-//        System.out.println(s);
-        System.out.println("~~~~");
-        final Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(1000);
-                    System.out.println("执行完毕");
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        thread.start();
-        thread.suspend();
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(2000);
-                    thread.resume();
-                    System.out.println("已经解除线程挂起");
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+    public static void mdain(String...args){
+        long q = System.currentTimeMillis();
+        for (int j=0; j< 100000000 ;j++) {
+            int i = 5 << 3;
+            int z = 5 << 3;
+            int x = 5 << 3;
+            int c = 5 << 3;
+            int v = 5 << 3;
+        }
+        long w = System.currentTimeMillis();
+        System.out.println(w - q);
+
+        long a = System.currentTimeMillis();
+        for (int j=0; j< 100000000 ;j++) {
+            int i = 5 * 2 * 2 * 2;
+            int v = 5 * 2 * 2 * 2;
+            int b = 5 * 2 * 2 * 2;
+            int n = 5 * 2 * 2 * 2;
+            int m = 5 * 2 * 2 * 2;
+        }
+        long s = System.currentTimeMillis();
+        System.out.println(s - a);
     }
 
     public Text text(){

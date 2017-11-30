@@ -3,6 +3,7 @@ package text;
 import com.sun.xml.internal.fastinfoset.sax.Properties;
 
 import java.io.*;
+import java.util.Arrays;
 
 /**
  * Created by 18624915319 on 2017/7/26.
@@ -33,20 +34,24 @@ public class Text {
     }
 
     public static void main(String[] args) {
-//        getClass().getResourceAsStream("text");
-        System.getProperty("text.properties");
-        System.out.println(Text.class.getResource("/"));
-        Text text = new Text();
-//        InputStream stream = Text.class.getResourceAsStream("/text.properties");
-        InputStream stream = Text.class.getResourceAsStream("/text.properties");
-        java.util.Properties properties = new java.util.Properties();
-        try {
-            properties.load(new BufferedReader(new InputStreamReader(stream, "utf-8")));
-            String name = properties.getProperty("name");
-            String age = properties.getProperty("age");
-            System.out.println(name + age);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        new Text().match();
+        
+    }
+
+    private void match(){
+        boolean isOk = false;
+        String s = "ffffdsafa.txt";
+//        + 的使用
+        isOk = s.matches("f+dsafa.txt");
+//        * 的使用
+        isOk = s.matches("f*dsafa.txt");
+//        ? 的使用
+        isOk = s.matches("ffff?dsafa.txt");
+//        () 用于匹配字表达式
+//        [] 标记一个中括号表达式的开始。
+//        ^  标记匹配开始的位置
+
+
+        System.out.println(isOk);
     }
 }
