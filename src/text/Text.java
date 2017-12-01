@@ -40,7 +40,7 @@ public class Text {
 
     private void match(){
         boolean isOk = false;
-        String s = "ffffdsafa.txt";
+        String s = "fa.txt";
 //        + 的使用
         isOk = s.matches("f+dsafa.txt");
 //        * 的使用
@@ -50,7 +50,10 @@ public class Text {
 //        () 用于匹配字表达式
 //        [] 标记一个中括号表达式的开始。
 //        ^  标记匹配开始的位置
-
+//        | 表达式
+//        [] 表达式
+//        [^as] 表达式
+        isOk = s.matches("[^f,a]a.txt");
 
         System.out.println(isOk);
     }
