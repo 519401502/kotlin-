@@ -64,16 +64,10 @@ class PrivateTest {
 
 
 fun main(args: Array<String>) : Unit {
-    var clazz = Bean::class.java
-    var bean : Bean = clazz.newInstance()
-    var m : Method =clazz.getMethod("text", null);
-    //下面这一步是必须的，必须先要设置访问权限为true
-    m.isAccessible = true;
-    m.invoke(bean);
-//    var id: Field = clazz.getDeclaredField("id");
-//    id.setAccessible(true);
-//    var i = id.getInt(bean);
-//    System.out.println(i);
+    var ints: IntArray = intArrayOf(12)
+
+
+
 }
 
 abstract class Interface {
